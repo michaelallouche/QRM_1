@@ -34,3 +34,14 @@ hist(data_exp,
 lambda = 10
 n_list = c(5, 50 , 500, 5000, 10000)
 
+for (i in n_list) { 
+        data_exp = rexp(n,lambda)
+        print(paste("Empirical mean for n=", i,":", mean(data_exp)))
+        hist(data_exp, 
+             main = paste("Histogram of Exponential Distribution for n =", i), 
+             xlab = "Exponential Distribution",
+             col="red",
+             breaks=50,
+             prob = TRUE)
+}
+
